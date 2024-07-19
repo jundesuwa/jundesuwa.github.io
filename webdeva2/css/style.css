@@ -44,13 +44,152 @@ h5 {
     }
 
     /*make both ham and nav button width to 100vw*/
-    .nav-button-style {
+    ul li {
         width: 98vw !important;
     }
 
     .ham-button-style {
         width: 98vw !important;
     }
+
+    /*
+    -----------------------------------------------------------------------------------PAGE 1-------------------------------------------------------------------------------
+    */
+
+    .title-box{
+        width: 90vw !important;
+    }
+
+    
+
+    /*
+    -----------------------------------------------------------------------------------PAGE 2-------------------------------------------------------------------------------
+    */
+
+    #page2{
+        height: 600% !important;
+    }
+
+    #page2 .info{
+        width: 95vw !important;
+        height: 120vh !important;
+    }
+
+    #page2 .info img{
+        height: 30% !important;
+        width: 70% !important;
+    }
+
+    /*
+    -----------------------------------------------------------------------------------PAGE 3-------------------------------------------------------------------------------
+    */
+
+    #page3{
+        height: 200% !important;
+    }
+
+    #page3 .container{
+        height: 200vh !important;
+        justify-content: flex-start !important;
+    }
+
+    #page3 .container h3{
+        margin-top: 10vh !important;
+    }
+
+    .diagram{
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        margin-top: 10vh !important;
+    }
+
+    .diagram-image1{
+        width: 90% !important;
+        height: 26% !important;
+    }
+
+    .diagram-image1 img{
+        height: 70% !important;
+    }
+
+    .diagram-image1 .diagram-button:nth-child(1){
+        bottom: 30% !important;
+    }
+
+    .diagram-image1 .diagram-button:nth-child(2){
+        bottom: 40%;
+        left: 35%;
+    }
+
+    .diagram-image1 .diagram-button:nth-child(3){
+        bottom: 55%;
+        left: 65%;
+    }
+
+    .diagram-image1 .diagram-button:nth-child(4){
+        bottom: 65%;
+        left: 26%;
+    }
+
+    .diagram-image2{
+        width: 100% !important;
+        height: 30% !important; 
+    }
+
+    /*change reassemble keyboard button location*/
+    .diagram-image2 .diagram-button:nth-child(1) {
+        bottom: 11%;
+    }
+
+    /*change casing button location*/
+    /* .diagram-image2 .diagram-button:nth-child(2){
+        left: 25%;
+        bottom: 17%;
+    } */
+
+    /*change switches button location*/
+    /* .diagram-image2 .diagram-button:nth-child(3){
+        left: 25%;
+        bottom: 51%;
+    } */
+
+    /*change keycaps button location*/
+    /* .diagram-image2 .diagram-button:nth-child(4){
+        left: 23%;
+        bottom: 57%;
+    } */
+
+    /*change PCB button location*/
+    .diagram-image2 .diagram-button:nth-child(2){
+        left: 25%;
+        bottom: 28%;
+    }
+
+    /*change case foam button location*/
+    .diagram-image2 .diagram-button:nth-child(3){
+        left: 23%;
+        bottom: 22%;
+    }
+
+    /*change plate button location*/
+    .diagram-image2 .diagram-button:nth-child(4){
+        left: 22%;
+        bottom: 35%;
+    }
+
+    .diagram-info{
+        margin-top: 6vh;
+        width: 100% !important;
+        height: 70% !important;
+    }
+
+    .diagram-info .info {
+        width: 68% !important;
+    }
+
+    /*
+    -----------------------------------------------------------------------------------PAGE 4-------------------------------------------------------------------------------
+    */
 }
 
 
@@ -154,12 +293,17 @@ li {
     opacity: 1;
 }
 
-.shown-title-box h3 {
+.shown-title-box p {
     opacity: 1;
 }
 
-.title-box h3 {
-    font-size: 1em;
+.title-box p {
+    margin-left: 10px;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
 }
 
 .background img {
@@ -341,58 +485,94 @@ button {
 
 /*image diagrams*/
 .diagram-image1 {
-    width: 0%;
-    height: 100%;
+    width: 40%;
+    height: 60%;
     visibility: hidden;
     pointer-events: none;
-    background-image: url("../images/keyboardexample1.png");
-    background-size: cover;
-    background-size: contain;
-    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.diagram-image1 img{
+    width: 100%;
+    height: 100%;
 }
 
 /*edit the change image button*/
 .diagram-image1 .diagram-button:nth-child(1) {
-    bottom: 11%;
+    bottom: 0%;
 }
 
 .diagram-image1 .CasingBtn {
-    bottom: 20%;
-    left: 15%;
+    bottom: 16%;
+    left: 38%;
 }
 
 .diagram-image1 .SwitchesBtn {
-    bottom: 35%;
-    left: 28%;
+    bottom: 32%;
+    left: 56%;
 }
 
 .diagram-image1 .KeycapsBtn {
-    bottom: 37%;
-    left: 16%;
+    bottom: 52%;
+    left: 30%;
 }
 
 
 .diagram-image2 {
-    width: 0%;
+    width: 49%;
     height: 100%;
     visibility: hidden;
-    background-image: url("../images/keyboardexample2.png");
-    background-size: cover;
-    background-size: contain;
-    background-repeat: no-repeat;
-
 }
 
+.diagram-image2 img{
+    width: 100%;
+    height: 100%;
+}
+
+/*change reassemble keyboard button location*/
 .diagram-image2 .diagram-button:nth-child(1) {
-    bottom: 24%;
+    bottom: 11%;
 }
 
+/*change casing button location*/
+/* .diagram-image2 .diagram-button:nth-child(2){
+    left: 25%;
+    bottom: 17%;
+} */
 
+/*change switches button location*/
+/* .diagram-image2 .diagram-button:nth-child(3){
+    left: 25%;
+    bottom: 51%;
+} */
+
+/*change keycaps button location*/
+/* .diagram-image2 .diagram-button:nth-child(4){
+    left: 23%;
+    bottom: 57%;
+} */
+
+/*change PCB button location*/
+.diagram-image2 .diagram-button:nth-child(2){
+    left: 25%;
+    bottom: 28%;
+}
+
+/*change case foam button location*/
+.diagram-image2 .diagram-button:nth-child(3){
+    left: 23%;
+    bottom: 22%;
+}
+
+/*change plate button location*/
+.diagram-image2 .diagram-button:nth-child(4){
+    left: 22%;
+    bottom: 35%;
+}
 
 
 /*for changing which diagram is being shown*/
 .shown-image {
-    width: 49%;
     visibility: visible !important;
     pointer-events: all !important;
 }
@@ -418,13 +598,14 @@ button {
     display: block;
 
     /*make sure there are no divs visible at first*/
-    height: 0%;
+    height: 55vh;
+    width: 39%;
+    position: absolute;
     visibility: hidden;
     pointer-events: none;
 }
 
 .shown-components-info {
-    height: 100% !important;
     visibility: visible !important;
     pointer-events: all !important;
 }
@@ -483,27 +664,21 @@ button {
 
 #page4 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100%;
+    background-color: #216078;
+    height: 300%;
     width: 100%;
 }
 
-/*page 4 end*/
-
-/*page 5*/
-#page5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+#page4 .box {
+    display: block;
+    background-color: #0B1F27;
+    border-radius: 25px;
 }
 
-/*page 5 end*/
-
-
-.background {
-    height: 100%;
-    width: 100%;
+#page4 .box:nth-child(1) {
+    width: 85vw;
+    height: 15vh;
+    margin-top: 2vh;
 }

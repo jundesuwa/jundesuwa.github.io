@@ -62,6 +62,11 @@ function toggleMenus() { /*open and close menu*/
   // else menuItemsList.style.display = "block";
 }
 
+//when screen resizes
+if(document.body.offsetWidth < 800){
+
+}
+
 //TODO: use condition to check if page display is not equals to none, then add class for transition
 
 /*
@@ -96,7 +101,7 @@ const observerTitleBox = new IntersectionObserver((entries) => {
           entry.target.classList.add("shown-title-box");
 
           //add a random quote to title box
-          var titleboxQuote = document.querySelector("#page1 .title-box h3");
+          var titleboxQuote = document.querySelector("#page1 .title-box p");
           const randomIndex = Math.floor(Math.random() * mainQuotes.length);
           const randomQuote = mainQuotes[randomIndex];
           titleboxQuote.textContent = randomQuote;
