@@ -12,32 +12,37 @@
 
 <body>
     <nav>
+        <!-- button to toggle the header buttons on mobile -->
         <button class="ham-button-style" id="hamIcon"></button>
         <ul>
-
-            <li><button class="nav-button-style" id="page1btn">hi</button></li>
-            <li><button class="nav-button-style" id="page2btn">hi</button></li>
-            <li><button class="nav-button-style" id="page3btn">hi</button></li>
-            <li><button class="nav-button-style" id="page4btn">hi</button></li>
-            <li><button class="nav-button-style" id="page5btn">hi</button></li>
+            <!-- each button opens a page -->
+            <li><button class="nav-button-style" id="page1btn">Introduction</button></li>
+            <li><button class="nav-button-style" id="page2btn">History of Keyboards</button></li>
+            <li><button class="nav-button-style" id="page3btn">Keyboard Diagram</button></li>
+            <li><button class="nav-button-style" id="page4btn">Building keyboards</button></li>
         </ul>
     </nav>
     <main>
+        <!-- page 1 -->
         <div class="page" id="page1">
+            <!-- title box pops up -->
             <div class="title-box">
                 <h1>All about keyboards</h1>
                 <p></p>
             </div>
+            <!-- background alternates through different pictures of keyboards -->
             <div class="background">
-                <img class="shown-background" src="images/keyboardimg1.png">
-                <img src="images/keyboardimg2.png">
-                <img src="images/keyboardimg3.png">
-                <img src="images/keyboardimg4.png">
+                <img class="shown-background" src="images/keyboardimg1.png" alt="keyboard image 1">
+                <img src="images/keyboardimg2.png" alt="keyboard image 2">
+                <img src="images/keyboardimg3.png" alt="keyboard image 3">
+                <img src="images/keyboardimg4.png" alt="keyboard image 4">
             </div>
         </div>
+        <!-- page 2 -->
         <div class="page" id="page2">
+            <!-- box which shows info about keyboards, this one is about typewriters -->
             <div class="info">
-                <img src="images/typewriter.png">
+                <img src="images/typewriter.png" alt="typewriter image">
                 <h1>The start of keyboards</h1>
                 <h3>
                     The first ever ‘keyboards’ were typewriters, which were used for typing and printing text onto
@@ -53,8 +58,9 @@
                     features to make typing more efficient.
                 </h3>
             </div>
+            <!-- box which shows info about keyboards, this one is about the first mechanical keyboards -->
             <div class="info">
-                <img src="images/modelm.png">
+                <img src="images/modelm.png" alt="ibm model m keyboard image">
                 <h1>The introduction of the modern keyboards</h1>
                 <h3>
                     As the advent of electronics and computer, the keyboard evolved as well.
@@ -72,8 +78,9 @@
                     mechanical keyboards.
                 </h3>
             </div>
+            <!-- box which shows info about keyboards, this one is about modern custom keyboards  -->
             <div class="info">
-                <img src="images/alexotoskb.png">
+                <img src="images/alexotoskb.png" alt="image of one of alexotos' custom keyboards">
                 <h1>The modern keyboard</h1>
                 <h3>
                     Nowadays, there is a wide selection of different keyboards to choose from.
@@ -93,14 +100,16 @@
             <div class="info">
                 <!-- keybaord typing test -->
                 <div class="container">
+                    <label for="wordCount">Word Count:</label>
+                    <input name="wordCount" id="wordCount" value="10" type="number" min="10" step="1">
                     <div class="stats">
                         <p>Time: <span id="timer">0s</span></p>
                         <p>Mistakes: <span id="mistakes">0</span></p>
                     </div>
-                    <div id="quote" onmousedown="return false" onselectstart="return false"></div>
+                    <div id="quote" onmousedown="return false"></div>
                     <textarea rows="3" id="quote-input" placeholder="Type here when the test starts.."></textarea>
-                    <button id="start-test" onclick="startTest()">Start Test</button>
-                    <button id="stop-test" onclick="displayResult()">Stop Test</button>
+                    <button class="typingTestBtn" id="start-test" onclick="startTest()">Start Test</button>
+                    <button class="typingTestBtn" id="stop-test" onclick="displayResult()">Stop Test</button>
                     <div class="result">
                         <h3>Result</h3>
                         <div class="wrapper">
@@ -111,6 +120,7 @@
                 </div>
             </div>
         </div>
+        <!-- page 3 -->
         <div class="page" id="page3">
             <div class="container">
                 <h3>
@@ -118,14 +128,17 @@
                     these components, especially the switches and the keycaps, can be customised as much as the user
                     wants. Using this interactable diagram, you can easily see what goes inside of a keyboard.
                 </h3>
+                <!-- interactable diagram with info  -->
                 <div class="diagram">
+                    <!-- first diagram-image -->
                     <div class="diagram-image diagram-image1 shown-image">
                         <button class="diagram-button">Open Keyboard</button>
                         <button class="diagram-button CasingBtn">Casing</button>
                         <button class="diagram-button SwitchesBtn">Switches</button>
                         <button class="diagram-button KeycapsBtn">Keycaps</button>
-                        <img src="images/keyboardexample1.png">
+                        <img src="images/keyboardexample1.png" alt="diagram keyboard image 1">
                     </div>
+                    <!-- second diagram-image -->
                     <div class="diagram-image diagram-image2">
                         <button class="diagram-button">Reassemble Keyboard</button>
                         <!-- <button class="diagram-button CasingBtn">Casing</button>
@@ -134,10 +147,13 @@
                         <button class="diagram-button PCBBtn">PCB</button>
                         <button class="diagram-button CaseFoamBtn">Case Foam</button>
                         <button class="diagram-button PlateBtn">Plate</button>
-                        <img src="images/keyboardexample2.png">
+                        <img src="images/keyboardexample2.png" alt="diagram keyboard image 2">
                     </div>
+                    <!-- the info the user will see by clicking on the buttons -->
                     <div class="diagram-info">
+                        <!-- adds a blue border -->
                         <div class="box">
+                            <!-- has all the info that can be toggled on and off -->
                             <div class="info" id="Casing">
                                 <h1>Casing</h1>
                                 <p>
@@ -212,10 +228,14 @@
             </div>
         </div>
         <div class="page" id="page4">
-            <div class="box"></div>
-        </div>
-        <div class="page" id="page5">
-            page 5 content
+            <div class="box">
+                <h3>
+                    Now we get to the fun part, making your own custom keyboard. Before you start though, You should
+                    consider what size you want you keyboard to be. The keyboard market has grown significantly in the
+                    past few years, and you would be able to find many keyboards with different layouts to choose from.
+                    Use this survey to help determine your preferred keyboard layout.
+                </h3>
+            </div>
         </div>
     </main>
 </body>

@@ -10,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/* make every words the font Roboto Mono and blue colour */
 p,
 h1,
 h2,
@@ -26,7 +27,15 @@ h5 {
     display: none;
 }
 
+/*for mobile support*/
 @media screen and (max-width:800px) {
+
+    /* TODO: ADD FULLSCREEN SUPPORT */
+
+    /*
+    -----------------------------------------------------------------------------------NAV (MOBILE) -------------------------------------------------------------------------------
+    */
+
 
     /*show ham button*/
     #hamIcon {
@@ -53,7 +62,7 @@ h5 {
     }
 
     /*
-    -----------------------------------------------------------------------------------PAGE 1-------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------PAGE 1 (MOBILE) -------------------------------------------------------------------------------
     */
 
     .title-box{
@@ -63,7 +72,7 @@ h5 {
     
 
     /*
-    -----------------------------------------------------------------------------------PAGE 2-------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------PAGE 2 (MOBILE) -------------------------------------------------------------------------------
     */
 
     #page2{
@@ -81,7 +90,7 @@ h5 {
     }
 
     /*
-    -----------------------------------------------------------------------------------PAGE 3-------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------PAGE 3 (MOBILE) -------------------------------------------------------------------------------
     */
 
     #page3{
@@ -188,15 +197,20 @@ h5 {
     }
 
     /*
-    -----------------------------------------------------------------------------------PAGE 4-------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------PAGE 4 (MOBILE) -------------------------------------------------------------------------------
     */
 }
+
 
 
 
 main {
     height: 100vh;
 }
+
+/*
+-----------------------------------------------------------------------------------NAV (PC) -------------------------------------------------------------------------------
+*/
 
 nav {
     display: flex;
@@ -211,20 +225,21 @@ ul {
 }
 
 li {
-    width: 24%;
+    list-style-type: none; /*for removing the black dot*/
+    width: 25%;
 }
 
+/* for nav button aesthetics */
 .nav-button-style {
-    background-color: #AA3939;
+    background-color: #0B1F27;
     background-image: none;
-    border: 1px solid #AA3939;
+    border: 1px solid #216078;
     border-radius: 4px;
-    color: #f87c7c;
+    color: #216078;
     /* cursor: pointer; */
     display: inline-block;
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
-    margin: 3px;
     white-space: nowrap;
     overflow: visible;
     text-align: center;
@@ -232,8 +247,9 @@ li {
     height: 4vh;
 }
 
+/* for ham button aesthetics */
 .ham-button-style {
-    background-color: red;
+    background-color: #216078;
     background-image: url("../images/menubutton.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -247,12 +263,13 @@ li {
     height: 4vh;
 }
 
+/* used for toggling the display of nav buttons from none to inline-block */
 .nav-button-hide {
     display: inline-block;
 }
 
 /*
------------------------------------------------------------------------------------PAGE 1-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------PAGE 1 (PC) -------------------------------------------------------------------------------
 */
 
 #page1 {
@@ -282,6 +299,7 @@ li {
     transition: all 0.5s ease-in-out;
 }
 
+/* added to title box to give transition */
 .shown-title-box {
     opacity: 1;
     transform: translateY(-10%);
@@ -313,15 +331,18 @@ li {
     background-repeat: no-repeat;
     background-size: auto;
     opacity: 0;
+
+    /*transition effects*/
     transition: all 1s ease-in-out;
 }
 
+/* added to background to transition between images */
 .shown-background {
     opacity: 1 !important;
 }
 
 /*
------------------------------------------------------------------------------------PAGE 2-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------PAGE 2 (PC) -------------------------------------------------------------------------------
 */
 
 #page2 {
@@ -353,6 +374,7 @@ li {
     transition: all 0.5s ease-in-out;
 }
 
+/* added to info divs to give transition  */
 .shown-page2-info {
     opacity: 1 !important;
     visibility: visible !important;
@@ -362,7 +384,6 @@ li {
 #page2 .info h3 {
     width: 90%;
 }
-
 
 #page2 .info img {
     border-radius: 10px;
@@ -384,6 +405,12 @@ li {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+#page2 .info label{
+    font-family: "Roboto Mono";
+    color: #216078;
+
+}
+
 .stats {
     text-align: right;
     font-size: 18px;
@@ -395,6 +422,7 @@ li {
 }
 
 #quote {
+    user-select: none;
     text-align: justify;
     margin: 50px 0 30px 0;
 }
@@ -407,7 +435,7 @@ textarea {
     font-size: 16px;
 }
 
-button {
+.typingTestBtn {
     float: right;
     margin-top: 20px;
     background-color: #3066f6;
@@ -447,14 +475,14 @@ button {
 }
 
 /*
------------------------------------------------------------------------------------PAGE 3-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------PAGE 3 (PC) -------------------------------------------------------------------------------
 */
 
 #page3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #216078;
+    background-color: #164050;
     height: 100%;
     width: 100%;
 }
@@ -659,15 +687,15 @@ button {
 }
 
 /*
------------------------------------------------------------------------------------PAGE 4-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------PAGE 4 (PC) -------------------------------------------------------------------------------
 */
 
 #page4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #216078;
-    height: 300%;
+    background-color: #164050;
+    height: 400%;
     width: 100%;
 }
 
@@ -678,7 +706,14 @@ button {
 }
 
 #page4 .box:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 85vw;
-    height: 15vh;
+    height: 90vh;
     margin-top: 2vh;
+}
+
+#page4 .box:nth-child(1) h3{
+    width: 90%;
 }
