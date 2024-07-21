@@ -118,7 +118,22 @@ elements.forEach(function(element) {
   observerTitleBox.observe(element);
 });
 
+function updateQR() {
 
+  let qr = document.querySelector(".qrBackground");
+
+  if (window.innerWidth < 800) {
+    qr.style.display = "none";
+  } else {
+    qr.style.display = "block";
+  }
+}
+
+// Run the function on initial load
+updateQR();
+
+// Add event listener for window resize
+window.addEventListener('resize', updateQR);
 
 /*
 -----------------------------------------------------------------------------------PAGE 2-------------------------------------------------------------------------------

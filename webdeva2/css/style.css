@@ -63,6 +63,10 @@ s {
         width: 100vw !important;
     }
 
+    .nav-button-style:hover{
+        background-color: #0B1F27 !important;
+    }
+
     .ham-button-style {
         width: 100vw !important;
     }
@@ -270,6 +274,12 @@ li {
     text-align: center;
     width: 99%;
     height: 4vh;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-button-style:hover{
+    background-color: #216078;
+    color: white;
 }
 
 /* for ham button aesthetics */
@@ -366,6 +376,21 @@ li {
     opacity: 1 !important;
 }
 
+.qrBackground{
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    left: 86%;
+    bottom: 8%;
+}
+
+
+.qrBackground img{
+    width: 98%;
+    height: 98%;
+}
 /*
 -----------------------------------------------------------------------------------PAGE 2 (PC) -------------------------------------------------------------------------------
 */
@@ -421,7 +446,7 @@ li {
     width: 90%;
     height: 90%;
     padding: 50px 30px;
-    background-color: #ffffff;
+    background-color: #0B1F27;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -452,12 +477,20 @@ li {
     margin: 50px 0 30px 0;
 }
 
+#quote span{
+    font-family: "Roboto Mono";
+    color: white;
+}
+
 textarea {
     resize: none;
     width: 100%;
     border-radius: 5px;
     padding: 10px 5px;
     font-size: 16px;
+    border: 1px solid #216078;
+    background-color: #0B1F27;
+    color: #216078;
 }
 
 .typingTestBtn {
@@ -492,11 +525,11 @@ textarea {
 }
 
 .success {
-    color: #44b267;
+    color: #44b267 !important;
 }
 
 .fail {
-    color: #e81c4e;
+    color: #e81c4e !important;
 }
 
 /*
