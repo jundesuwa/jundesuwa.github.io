@@ -188,8 +188,12 @@ s {
     -----------------------------------------------------------------------------------PAGE 4 (MOBILE) -------------------------------------------------------------------------------
     */
 
+    #page4{
+        height: 450vh !important;
+    }
+
     #page4 .box:nth-child(2){
-        height: 180vh !important;
+        height: 250vh !important;
     }
 
     #page4 .container{
@@ -206,13 +210,13 @@ s {
 
     .goBack{
         width: 20% !important;
-        height: 13% !important;
+        height: 3% !important;
         margin-bottom: 2vh;
     }
 
     .goFront{
         width: 20% !important;
-        height: 13% !important;
+        height: 3% !important;
     }
 
     #page4 .box:nth-child(1) img{
