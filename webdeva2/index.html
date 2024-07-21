@@ -8,6 +8,7 @@
     <title>Document</title>
     <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/Screenshot 2024-07-21 032529.png">
 </head>
 
 <body>
@@ -100,8 +101,10 @@
             <div class="info">
                 <!-- keybaord typing test -->
                 <div class="container">
-                    <label for="wordCount">Word Count:</label>
-                    <input name="wordCount" id="wordCount" value="10" type="number" min="10" step="1">
+                    <form action="#" onsubmit="return false">
+                        <label for="wordCount">Word Count:</label>
+                        <input name="wordCount" id="wordCount" value="10" type="number" min="10" step="1">
+                    </form>
                     <div class="stats">
                         <p>Time: <span id="timer">0s</span></p>
                         <p>Mistakes: <span id="mistakes">0</span></p>
@@ -233,8 +236,87 @@
                     Now we get to the fun part, making your own custom keyboard. Before you start though, You should
                     consider what size you want you keyboard to be. The keyboard market has grown significantly in the
                     past few years, and you would be able to find many keyboards with different layouts to choose from.
-                    Use this survey to help determine your preferred keyboard layout.
+                    Use this image to help determine your desired keyboard layout.
                 </h3>
+                <img src="images/layout.png" alt="how to pick your keyboard">
+            </div>
+            <div class="box">
+                <h3>
+                    Next we need the switches for our keyboard. However, you need to know in detail which switch type
+                    you want. Furthermore, there are multiple variants of the same switch type that can let you
+                    customise
+                    the typing sound. You can click on the switch images to show a diagram of how it works.
+                </h3>
+                <div class="container">
+                    <button class="goBack"></button>
+                    <div class="info-container">
+                        <div class="info shown-info" id="linear">
+                            <img src="images/redswitchimg.gif">
+                            <div class="info-block">
+                                <h1>Linear switches</h1>
+                                <p>
+                                    The first type of switch is the linear switch. These switches have a smooth keypress
+                                    with
+                                    no tactile bump. These switches are mainly used more for gaming since you will not
+                                    have
+                                    any resistance. While Cherry MX Red switches are primarily the most well known
+                                    linear
+                                    switches, there many more linear switches.
+                                    Some of my favourites are the Hyacinth V2s and the HMX Xinhai, since they provide a
+                                    near
+                                    perfect keystroke while also helping to give that clacky keyboard sound.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info" id="tactile">
+                            <img src="images/brownswitchimg.gif">
+                            <div class="info-block">
+                                <h1>Tactile switches</h1>
+                                <p>
+                                    The second type of switch is the tactile switch. These switches have tactile bump
+                                    during the keypress.
+                                    These switches are mainly for typing, as the tactile bump can tell the user when
+                                    they have actuated a key.
+                                    Furthermore, tactile switches have many types of tactile bumps, such as light
+                                    tactile bumps and P-shaped tactile bumps.
+                                    For instance, the Cherry MX brown switch has a light tactile bump in which the user
+                                    has to press down a certain length to feel the tactile bump.
+                                    Personally, my favourite tactile switch is the Haimu Benevolence, since it has a
+                                    sharp P-shaped tactile bump to tell me I have definitely pressed a key.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info" id="clicky">
+                            <img src="images/blueswitchimg.gif">
+                            <div class="info-block">
+                                <h1>Clicky switches</h1>
+                                <p>
+                                    The last type of switch of the clicky switch. These simply make an audible click
+                                    sound when pressed and have a tactile bump like tactile switches.
+                                    A lot of gaming peripheral companies like putting clicky switches into their
+                                    keyboards for some reason. While these switches can also be used for typing since
+                                    they also have a tactile bump, the bump on switches like the Cherry MX Blues are not
+                                    very noticable.
+                                    Also, many people in the keyboard community have moved away from the clicky sounds
+                                    that clicky switches make and have instead opted for linear and tactile switches
+                                    instead.
+                                    they make. However, if you really want to have clicky switches in your keyboard
+                                    <s>in which case a certain gamer will rush to your house with a fire axe</s>,
+                                    you can get Kailh clicky switches like the Box Jades and Box Navies that have a more
+                                    noticable bump.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="goFront"></button>
+                </div>
+            </div>
+            <div class="box">
+                <h3>
+                    Finally, we can talk about keycaps. The first thing you want to check is the profile of the keycaps.
+                    There are multiple types like Cherry, OEM, XDA, ASA and much more. Some keycaps are better for gaming and typing than others.
+                </h3>
+                <img src="images/keycapprofiles.png" alt="keycap profiles">
             </div>
         </div>
     </main>

@@ -16,7 +16,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+s {
     font-family: "Roboto Mono";
     color: #216078;
 
@@ -36,6 +37,9 @@ h5 {
     -----------------------------------------------------------------------------------NAV (MOBILE) -------------------------------------------------------------------------------
     */
 
+    body{
+        background-color: #164050;
+    }
 
     /*show ham button*/
     #hamIcon {
@@ -45,6 +49,7 @@ h5 {
     /*change the div flex-direction to column to make all elements go downwards*/
     nav {
         flex-direction: column;
+        background-color: #216078 !important;
     }
 
     /*hide nav buttons*/
@@ -54,11 +59,12 @@ h5 {
 
     /*make both ham and nav button width to 100vw*/
     ul li {
-        width: 98vw !important;
+        margin-left: 2px !important;
+        width: 100vw !important;
     }
 
     .ham-button-style {
-        width: 98vw !important;
+        width: 100vw !important;
     }
 
     /*
@@ -81,7 +87,7 @@ h5 {
 
     #page2 .info{
         width: 95vw !important;
-        height: 120vh !important;
+        height: 160vh !important;
     }
 
     #page2 .info img{
@@ -147,43 +153,25 @@ h5 {
 
     /*change reassemble keyboard button location*/
     .diagram-image2 .diagram-button:nth-child(1) {
-        bottom: 11%;
+        bottom: 52% !important;
     }
-
-    /*change casing button location*/
-    /* .diagram-image2 .diagram-button:nth-child(2){
-        left: 25%;
-        bottom: 17%;
-    } */
-
-    /*change switches button location*/
-    /* .diagram-image2 .diagram-button:nth-child(3){
-        left: 25%;
-        bottom: 51%;
-    } */
-
-    /*change keycaps button location*/
-    /* .diagram-image2 .diagram-button:nth-child(4){
-        left: 23%;
-        bottom: 57%;
-    } */
 
     /*change PCB button location*/
     .diagram-image2 .diagram-button:nth-child(2){
         left: 25%;
-        bottom: 28%;
+        bottom: 57% !important;
     }
 
     /*change case foam button location*/
     .diagram-image2 .diagram-button:nth-child(3){
-        left: 23%;
-        bottom: 22%;
+        left: 23% !important;
+        bottom: 59% !important;
     }
 
     /*change plate button location*/
     .diagram-image2 .diagram-button:nth-child(4){
-        left: 22%;
-        bottom: 35%;
+        left: 22% !important;
+        bottom: 61% !important;
     }
 
     .diagram-info{
@@ -199,6 +187,37 @@ h5 {
     /*
     -----------------------------------------------------------------------------------PAGE 4 (MOBILE) -------------------------------------------------------------------------------
     */
+
+    #page4 .box:nth-child(2){
+        height: 180vh !important;
+    }
+
+    #page4 .container{
+        flex-direction: column !important;
+    }
+
+    #page4 .box:nth-child(2) .info{
+        flex-direction: column !important;
+    }
+
+    #page4 .info-block{
+        width: 110% !important;
+    }
+
+    .goBack{
+        width: 20% !important;
+        height: 13% !important;
+        margin-bottom: 2vh;
+    }
+
+    .goFront{
+        width: 20% !important;
+        height: 13% !important;
+    }
+
+    #page4 .box:nth-child(1) img{
+        height: 55% !important;
+    }
 }
 
 
@@ -209,7 +228,7 @@ main {
 }
 
 /*
------------------------------------------------------------------------------------NAV (PC) -------------------------------------------------------------------------------
+----------------------------------------------------------------------------------- NAV (PC) -------------------------------------------------------------------------------
 */
 
 nav {
@@ -225,6 +244,8 @@ ul {
 }
 
 li {
+    margin-top: 4px;
+    margin-bottom: 4px;
     list-style-type: none; /*for removing the black dot*/
     width: 25%;
 }
@@ -243,7 +264,7 @@ li {
     white-space: nowrap;
     overflow: visible;
     text-align: center;
-    width: 98%;
+    width: 99%;
     height: 4vh;
 }
 
@@ -254,7 +275,7 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    border: 1px solid #0B1F27;
+    border: 1px solid #216078;
     border-radius: 4px;
     display: inline-block;
     font-family: 'Roboto Mono', monospace;
@@ -695,25 +716,120 @@ textarea {
     flex-direction: column;
     align-items: center;
     background-color: #164050;
-    height: 400%;
+    height: 320%;
     width: 100%;
 }
 
 #page4 .box {
-    display: block;
+    display: flex;
     background-color: #0B1F27;
     border-radius: 25px;
 }
 
 #page4 .box:nth-child(1) {
-    display: flex;
     flex-direction: column;
     align-items: center;
     width: 85vw;
-    height: 90vh;
+    height: 100vh;
     margin-top: 2vh;
 }
 
 #page4 .box:nth-child(1) h3{
+    margin-top: 2vh;
     width: 90%;
+}
+
+#page4 .box:nth-child(1) img{
+    margin-top: 2vh;
+    width: 85%;
+    height: 85%;
+}
+
+#page4 .box:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 85vw;
+    height: 90vh;
+    margin-top: 5vh;
+}
+
+#page4 .box:nth-child(2) h3{
+    margin-top: 2vh;
+    width: 90%;
+}
+
+#page4 .container{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 65%;
+}
+
+#page4 .box:nth-child(2) .goBack{
+    background-color: #0B1F27;
+    background-image: url("../images/long-arrow-left-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 4%;
+    height: 8%;
+}
+
+#page4 .box:nth-child(2) .goFront{
+    background-color: #0B1F27;
+    background-image: url("../images/long-arrow-right-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 4%;
+    height: 8%;
+}
+
+#page4 .box:nth-child(2) .info-container{
+    width: 80%;
+    height: 100%;
+}
+
+#page4 .box:nth-child(2) .info{
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
+}
+
+#page4 .box:nth-child(2) .shown-info{
+    display: flex;
+}
+
+
+#page4 .info-block{
+    display: block;
+    border: 3px solid #2C80A0;
+    width: 70%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+#page4 .info-block h1{
+    text-align: center;
+}
+
+#page4 .box:nth-child(3) {
+    flex-direction: column;
+    align-items: center;
+    width: 85vw;
+    height: 120vh;
+    margin-top: 5vh;
+}
+
+#page4 .box:nth-child(3) h3{
+    margin-top: 2vh;
+    width: 90%;
+}
+
+#page4 .box:nth-child(3) img{
+    margin-top: 5vh;
+    width: 85%;
 }

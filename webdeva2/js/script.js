@@ -88,9 +88,11 @@ setInterval(changeBackground, 8000);
 
 //make array of keyboard quotes for title box
 const mainQuotes = [
-  "I spent 500 dollars on shined out keycaps, but it was worth it",
-  "Bro clearly razer keyboards are the best",
-  "Bro it's a hobby, not an addiction",
+  "I spent 500 dollars on shined out keycaps, but it was worth it - Average user on r/mechmarket",
+  "bro cleArLY RazeR KEyboARDs ArE ThE besT - Some razer shill",
+  "Bro it's a hobby, not an addiction - me",
+  "Nice keyboard, but wooting clears - at least one mf in the video comments",
+
 ];
 
 //when give title card transition effect
@@ -209,6 +211,8 @@ const renderNewText = function () {
   console.log(quote);
 };
 
+
+//TODO: add sound for every click
 
 //Logic for comparing input words with quote
 userInput.addEventListener("input", function () {
@@ -402,5 +406,81 @@ reassembleKeyboardButton.addEventListener("click", switchDiagramImage);
 -----------------------------------------------------------------------------------PAGE 4-------------------------------------------------------------------------------
 */
 
-//TODO: add interactable
-//TODO: make an interactable picture swapper
+let switchImageElementArray = [
+  document.querySelector("#linear img"),
+  document.querySelector("#tactile img"),
+  document.querySelector("#clicky img"),
+];
+
+let switchImageArray = [
+  "images/redswitchimg.gif",
+  "images/brownswitchimg.gif",
+  "images/blueswitchimg.gif",
+];
+
+let switchGifArray = [
+  "images/redswitch.gif",
+  "images/brownswitch.gif",
+  "images/blueswitch.gif",
+];
+
+//get all switch info divs
+let switchInfo = document.querySelectorAll("#page4 .info");
+
+//make index the first switch info
+var switchInfoIndex = 0;
+
+let goBack = document.querySelector("#page4 .goBack");
+//minus 1 to switchInfoIndex
+goBack.addEventListener("click", function() {
+  //reset all switch images
+  for (let i = 0; i < switchImageElementArray.length; i++){
+    switchImageElementArray[i].src = switchImageArray[i];
+  }
+
+  for(let info of switchInfo){
+    if(info.style.display !== "none"){
+      info.style.display = "none";
+    }
+  }
+
+  //only add info index if doesnt exceed length
+  if(switchInfoIndex !== 0){
+    switchInfoIndex--;
+    console.log(switchInfoIndex); // For debugging
+  }
+
+  switchInfo[switchInfoIndex].style.display = "flex";
+});
+
+//get go front button 
+let goFront = document.querySelector("#page4 .goFront");
+//add 1 to switchInfoIndex
+goFront.addEventListener("click", function() {
+  //reset all switch images
+  for (let i = 0; i < switchImageElementArray.length; i++){
+    switchImageElementArray[i].src = switchImageArray[i];
+  }
+
+  for(let info of switchInfo){
+    if(info.style.display !== "none"){
+      info.style.display = "none";
+    }
+  }
+
+  //only add info index if doesnt exceed length
+  if(switchInfoIndex !== switchInfo.length - 1){
+    switchInfoIndex++;
+    console.log(switchInfoIndex); // For debugging
+  }
+
+  switchInfo[switchInfoIndex].style.display = "flex";
+});
+
+for (let i = 0; i < switchImageElementArray.length; i++) {
+  console.log(switchImageElementArray[i]);
+  switchImageElementArray[i].addEventListener("click", function(){
+    switchImageElementArray[i].src = switchGifArray[i];
+  });
+}
+
